@@ -29,6 +29,9 @@ use Symfony\Component\Config\FileLocator;
  */
 class DoctrineExtension extends AbstractDoctrineExtension
 {
+    protected $defaultConnection;
+    protected $entityManagers;
+
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration($container->getParameter('kernel.debug'));

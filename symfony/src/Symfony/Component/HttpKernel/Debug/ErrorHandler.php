@@ -57,7 +57,7 @@ class ErrorHandler
     /**
      * @throws \ErrorException When error_reporting returns error
      */
-    public function handle($level, $message, $file, $line, $context)
+    public function handle($level, $message, $file, $line, $context = null)
     {
         if (0 === $this->level) {
             return false;

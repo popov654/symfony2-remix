@@ -67,7 +67,7 @@ class ExceptionHandler
      *
      * @return Response A Response instance
      */
-    public function createResponse(\Exception $exception)
+    public function createResponse($exception)
     {
         $content = '';
         $title = '';

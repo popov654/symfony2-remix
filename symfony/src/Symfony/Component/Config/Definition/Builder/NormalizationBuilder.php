@@ -21,6 +21,7 @@ class NormalizationBuilder
     protected $node;
     public $before;
     public $remappings;
+    public $keys;
 
     /**
      * Constructor

@@ -29,6 +29,7 @@ class ArrayNode extends BaseNode implements PrototypeNodeInterface
     protected $addIfNotSet;
     protected $performDeepMerging;
     protected $ignoreExtraKeys;
+    protected $removeKeyAttribute;
 
     /**
      * Constructor.

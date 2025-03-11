@@ -402,4 +402,30 @@ class Session implements \Serializable
         } catch (\Exception $e) {
         }
     }
+
+    function __serialize()
+    {
+        return array(
+            'storage' => $this->storage,
+            'defaultLocale' => $this->defaultLocale,
+            'locale' => $this->locale,
+            'flashes' => $this->flashes,
+            'oldFlashes' => $this->oldFlashes,
+            'attributes' => $this->attributes,
+            'started' => $this->started,
+            'closed' => $this->closed
+        );
+    }
+
+    function __unserialize($data)
+    {
+        $this->storage = $data['storage'];
+        $this->defaultLocale = $data['defaultLocale'];
+        $this->locale = $data['locale'];
+        $this->flashes = $data['flashes'];
+        $this->oldFlashes = $data['oldFlashes'];
+        $this->attributes = $data['attributes'];
+        $this->started = $data['started'];
+        $this->closed = $dtd['closed'];
+    }
 }
